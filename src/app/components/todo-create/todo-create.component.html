@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row space-top">
+        <div class="col-md-12">
+            <h1>ADD TODO-LIST</h1>
+        </div>
+    </div>
+<form>
+    <fieldset>
+      
+      <div class="form-group">
+        <input #TodoDescInput type="text" class="form-control" id="descriptionExample" placeholder="Enter your task...">
+        <div class="form-group">
+          <select #selected class="form-control" id="sel1">
+            <option selected="" value="" selected disabled>Choose your day</option>
+            <option *ngFor="let day of weekDays" >{{day}}</option>
+          </select>
+          <select #selected1 class="form-control" id="sel1">
+            <option selected="" value="" selected disabled>Choose your importance</option>
+            <option *ngFor="let lis of list" >{{lis.importance}}</option>
+          </select>
+        <button type="button" class="btn btn-primary" (click)="createNewTask(TodoDescInput.value, selected.value, selected1.value)">Add Task</button>
+    </div>
+</div>
+
+<a>
+    {{ category }}
+</a>
+<a>
+    
+    {{ text }}
+</a>
+<button type="button" class="btn btn-primary" (click)="createNewEffect()">Add Effect</button>
+
+      <div class="form-group">
+
+      </div>
